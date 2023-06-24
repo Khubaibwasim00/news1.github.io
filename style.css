@@ -1,0 +1,181 @@
+/* font-family: 'Geologica', sans-serif;*/
+
+ 
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+p{
+    font-family: 'Preahvihear', sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.flex{
+    display:flex;
+    align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+nav{
+    background: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.icons i:hover,
+.icons a:hover{
+    color: rgb(255, 255, 255);
+    background: var(--green);
+    transform: rotate(360deg);
+}
+.icons #Bars{
+    display: none;
+}
+ .main-nav{
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.logo img{
+    width: 4rem;
+}
+.nav-links .flex .nav-item{
+    margin: 0 23px;
+}
+
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    color: var(--secondary-text-color);
+}
+.hover-link:active{
+    color:red;
+}
+
+.nav-item.active{
+    color: var(--accent-color);
+}
+#search-text{
+    height: 32px;
+    gap: 8px;
+}
+.news-input{
+    width: 200px;
+    height: 150%;
+    padding-block: 12px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.btn{
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--accent-color-dark);
+}
+
+main{
+    padding-block: 6rem;
+    margin-top: 150px;
+}
+.card-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 7rem;
+    align-items: start;
+}
+.card {
+    width: 21rem;
+    min-height: 400px;
+    box-shadow:  0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content{
+    padding: 12px;
+}
+.news-source{
+    margin-block: 12px;
+}
+
+@media(max-width: 860px){
+    .logo img{
+        width: 40px;
+        margin-left: 5px;
+    }
+    .nav-links .flex .nav-item{
+        margin: 0 8px;
+        font-size: 0.6rem;
+    }
+    .card{
+        width: 20rem;
+        margin-left: 2rem;
+        flex-direction: column;
+    }
+    .news-input{
+        width: 100px;
+        height: 110%;
+        padding-block: 6px;
+        padding-left: 5px;
+    }
+    .btn{
+        width: 30px;
+        background: transparent;
+        color: black;
+        transition: all .3s ease;
+    }
+    .btn:active{      
+        color: red;
+        text-decoration: underline;
+    }
+    
+}
